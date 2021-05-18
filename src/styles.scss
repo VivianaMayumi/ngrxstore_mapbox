@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+}
+
+
+/*General css */
+.theme-container{
+  max-width: 1500px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/******* Header *******/
+#main-toolbar{
+  position: relative;
+  height: 72px;
+  transition: 0.2s;
+  z-index: 9;
+  background: #13496E;
+  color: white;
+}
+
+/******* Footer *******/
+footer{
+  position: fixed;
+  overflow: hidden;
+  bottom:0px;
+  width: 100%;
+  background: rgba(33, 33, 33, 0.93);
+  color: #fff;
+}
+footer:before{
+   content: '';
+   position:absolute;
+   top: 0;
+   z-index:-1;
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+ }
+footer .copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
+footer .copyright p{
+  margin: 0;
+}
+
+/****** Spaces ******/
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.pl-3,
+.px-3 {
+  padding-left: 1rem !important;
+}
+
+.p-18{
+  padding: 18rem !important;
+}
+/**** Style labels ***/
+
+.text-title{
+  text-transform: uppercase;
+  color:#13496E;
+  font-weight: bold;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin: 50px auto;
+}
+
+.swiper-slide {
+  background: #f1f1f1;
+  color: #000;
+  text-align: center;
+  line-height: 300px;
+}
+
+@import "~swiper/swiper-bundle";
+
+.marker {
+  background-size: cover;
+  width: 36px;
+  height: 60px;
+  cursor: pointer;
+}

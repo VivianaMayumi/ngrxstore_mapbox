@@ -1,0 +1,28 @@
+<div *ngIf="flagSlide">
+  <swiper [slidesPerView]="7" [spaceBetween]="20" (swiper)="setControlledSwiper($event)" [navigation]="{}"
+          [pagination]="{ clickable: true }" [scrollbar]="{ draggable: true }" [watchSlidesVisibility]="true"
+          [watchSlidesProgress]="true">
+    <div *ngFor="let data of (mapData$ | async); let i = index;">
+      <ng-template swiperSlide >
+        <div class="mapData-card" [id]="'slide-'+ i">
+          <img [src]="data.photo" alt="photo apartament">
+          <div (click)="clickOnMarker(data.geocode)">
+            <h2>{{data.name}}</h2>
+            <p>{{data.streetAddress}}, {{data.city}}</p>
+          </div>
+          <button mat-button [style.color]="data.favorite ? '#E31F26' : 'FFFFFF'" (click)="updateMapMarker(data)">
+            <mat-icon class="mat-icon-sm">favorite_border</mat-icon>
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </swiper>
+</div>
+<div id="map"></div>
+<ul id="buttons">
+  <li  mat-raised-button id="button-fr" class="button" (click)="loadMapData()">1. Load Pins</li>
+  <li  mat-raised-button id="button-ru" class="button" (click)="replacePin()">2. Replace Pins</li>
+  <li  mat-raised-button id="button-de" class="button" (click)="zoomToPin()">3. Zoom To</li>
+  <li  mat-raised-button id="button-es" class="button" (click)="autoZoom()">4. Auto Zoom</li>
+</ul>
+

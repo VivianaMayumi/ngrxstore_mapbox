@@ -1,0 +1,29 @@
+<mat-sidenav-container>
+  <!--mat-sidenav  #sidenav [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" position="start" autoFocus="false" class="sidenav">
+    <a class="logo" routerLink="/">
+      <img [src]="MapFotoUrl"/>
+    </a>
+    <div class="divider"></div>
+    <div  class="vertical-menu-wrapper">
+      <app-vertical-menu [menuParentId]="0"></app-vertical-menu>
+    </div>
+  </mat-sidenav-->
+
+  <mat-sidenav-content class="page-wrapper" fxLayout="column" fxLayoutAlign="end stretch">
+
+    <header [ngClass]="'toolbar'"
+            [class.main-toolbar-fixed]="mainToolbarFixed">
+
+      <app-toolbar (onMenuIconClick)="sidenav.toggle()"></app-toolbar>
+
+    </header>
+
+    <main [class.content-offset-to-top]="false">
+      <router-outlet></router-outlet>
+    </main>
+
+    <div class="sticky-footer-helper" fxFlex="grow"></div>
+
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
