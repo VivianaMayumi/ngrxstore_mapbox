@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  remoteUrl: 'https://app.smartapartmentdata.com',
-  mapboxKey: 'pk.eyJ1Ijoidml2aW1heXV2bCIsImEiOiJja253Mzk2dmEwZWYyMnhxenR2MTN4YWE3In0.pSRdwA1gA7ByQ4icVXbV8g'
+  remoteUrl: 'https://locahost:8080',//url for general use
+  mapboxKey: 'pk-mapbox' //this Mapbox provide you when you create your account
 };
 
 /*

@@ -12,7 +12,7 @@ export class MapService {
     lng: -97.0117411,
   };
   initialZoom = 10;
-  style = 'https://api.maptiler.com/maps/eef16200-c4cc-4285-9370-c71ca24bb42d/style.json?key=SoL71Zyf7SmLrVYWC7fQ';
+  style = 'https://...'; //LINK WHERE YOU CAN TAKE THE STYLE FOR THE MAP
 
   mapbox = (mapboxgl as typeof mapboxgl);
   map: mapboxgl.Map;
